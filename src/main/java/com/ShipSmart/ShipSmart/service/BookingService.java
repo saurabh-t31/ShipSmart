@@ -84,5 +84,22 @@ public class BookingService {
         return R * c;
     }
 
+    public Booking updateBookingStatus(Long bookingId, BookingStatus status) {
+
+    Booking booking = bookingRepository.findById(bookingId)
+            .orElseThrow(() -> new RuntimeException("Booking not found"));
+
+    booking.setStatus(status);
+    booking.setUpdatedAt(LocalDateTime.now());
+
+    if (status == BookingStatus.DELIVERED && booking.getCourier() != null) {
+        Courier courier = booking.getCourier();
+        courier.setAvailable(true);
+        courierRepository.save(courier);
+    }
+
+    return bookingRepository.save(booking);
+}
+
 
 }
