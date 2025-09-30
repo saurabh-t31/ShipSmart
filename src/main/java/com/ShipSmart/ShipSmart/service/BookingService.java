@@ -101,5 +101,11 @@ public class BookingService {
     return bookingRepository.save(booking);
 }
 
+public Booking getBookingDetails(Long bookingId) {
+    return bookingRepository.findById(bookingId)
+            .orElseThrow(() -> new RuntimeException("Booking not found"));
+}
+
+
 
 }

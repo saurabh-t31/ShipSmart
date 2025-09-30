@@ -1,7 +1,9 @@
 package com.ShipSmart.ShipSmart.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -13,10 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ShipSmart.ShipSmart.entity.Booking;
 import com.ShipSmart.ShipSmart.entity.BookingStatus;
 import com.ShipSmart.ShipSmart.entity.Customer;
-import com.ShipSmart.ShipSmart.repository.BookingRepository;
 import com.ShipSmart.ShipSmart.service.BookingService;
-
-import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/bookings")
@@ -55,5 +54,14 @@ public class BookingController {
             return updateBooking;
 
     }
+
+    @GetMapping("/{id}")
+    public Booking getBooking(@PathVariable Long id) {
+
+    Booking booking = bookingService.getBookingDetails(id);
+    return booking;
+
+    }
+
 
 }
