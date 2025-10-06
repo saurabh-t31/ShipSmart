@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courier Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-md">
+         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo + Brand -->
+            <div class="flex items-center">
+                <img src="/images/falcon-logo.jpg" alt="Falcon Logo"
+                     class="h-16 w-auto object-contain" />
+                <h1 class="text-3xl font-bold text-blue-800">ShipSmart</h1>
+            </div>
+            
+            <!-- Nav Links -->
+            <nav class="space-x-6">
+                <a href="/" class="hover:text-blue-600">Home</a>
+                <a href="/about" class="hover:text-blue-600">About</a>
+                <a href="/login" class="hover:text-blue-600">Login</a>
+                <a href="/register" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Sign Up</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold mb-4">Fast, Reliable, and Secure Courier Services</h2>
+            <p class="text-lg mb-6">Manage your couriers, track deliveries, and ensure customer satisfaction — all in one place.</p>
+            <a href="/register" class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-200">Get Started</a>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+       <!-- How It Works Section -->
+    <section class="bg-gray-100 py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12">How It Works</h2>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 flex items-center justify-center rounded-full bg-blue-600 text-white text-3xl mb-4">
+                        <!-- User Icon -->
+                        <i data-lucide="user-plus"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Sign Up</h3>
+                    <p class="text-gray-600">Create your account to start managing couriers and tracking parcels easily.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 flex items-center justify-center rounded-full bg-indigo-600 text-white text-3xl mb-4">
+                        <!-- Package Icon -->
+                        <i data-lucide="package"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Book a Courier</h3>
+                    <p class="text-gray-600">Enter parcel details and assign a courier with just a few clicks.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 flex items-center justify-center rounded-full bg-green-600 text-white text-3xl mb-4">
+                        <!-- Truck Icon -->
+                        <i data-lucide="truck"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Track & Deliver</h3>
+                    <p class="text-gray-600">Monitor live updates until your parcel is safely delivered.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-blue-600 mb-3">Courier Management</h3>
+            <p>Easily add, update, and track couriers in real time with our system.</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-blue-600 mb-3">Parcel Tracking</h3>
+            <p>Customers can track parcels from pickup to delivery with live updates.</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-blue-600 mb-3">Reports & Analytics</h3>
+            <p>Generate reports to monitor performance, delivery efficiency, and more.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+        <p>&copy; 2025 ShipSmart. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+    <!-- Lucide JS Script -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+</html>
